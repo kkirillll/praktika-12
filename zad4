@@ -1,0 +1,37 @@
+using System;
+namespace zad4;
+
+public class Book
+{
+    private readonly string nazvanie;
+    public string Title { get; set; }
+    public string Autor { get; set; }
+
+    public Book(string nazvanie, string title, string autor)
+    {
+        this.nazvanie = nazvanie;
+        Title = title;
+        Autor =autor;
+    }
+
+    public void DisplayInfo()
+    {
+        Console.WriteLine($"Книга: {Title}");
+        Console.WriteLine($"Автор: {Autor}");
+        Console.WriteLine($"Название: {nazvanie}");
+    }
+
+    public static void Main(string[] args)
+    {
+        Book book = new Book("1231241", "Мастер и Маргарита", "Михаил Булгаков");
+        book.DisplayInfo();
+
+        book.Title = "Новое название";
+        book.Autor = "Новый автор";
+
+        Console.WriteLine("\nПосле изменений:");
+        book.DisplayInfo();
+
+        Console.ReadLine();
+    }
+}
