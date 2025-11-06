@@ -1,5 +1,7 @@
 using System;
 
+namespace zad2;
+
 public class ProgramConfig
 {
     public const string Vers = "1.6.9";
