@@ -1,0 +1,30 @@
+using System;
+namespace zad3;
+
+public class ObjectCounter
+{
+    private static int objectCount = 0;
+    
+    public ObjectCounter()
+    {
+        objectCount++;
+    }
+    
+    public static void DisplayObjectCount()
+    {
+        Console.WriteLine($"Текущее количество объектов: {objectCount}");
+    }
+    
+    public static void Main(string[] args)
+    {
+        ObjectCounter.DisplayObjectCount();
+        
+        ObjectCounter obj1 = new ObjectCounter();
+        ObjectCounter obj2 = new ObjectCounter();
+        ObjectCounter obj3 = new ObjectCounter();
+        
+        ObjectCounter.DisplayObjectCount();
+        
+        Console.ReadLine();
+    }
+}
