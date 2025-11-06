@@ -1,0 +1,34 @@
+using System;
+
+public class ProgramConfig
+{
+    public const string Vers = "1.6.9";
+    public const string Razrab_name = "Умэр";
+    public const string Program_name = "Май програм";
+    public static void DisplayProgramInfo()
+    {
+        Console.WriteLine("=== Информация о программе ===");
+        Console.WriteLine($"Название программы: {Program_name}");
+        Console.WriteLine($"Версия: {Vers}");
+        Console.WriteLine($"Разработчик: {Razrab_name}");
+        Console.WriteLine("===============================");
+    }
+
+    public static void DisplayShortInfo()
+    {
+        Console.WriteLine($"{Program_name} v{Vers} by {Razrab_name}");
+    }
+
+    public static void Main(string[] args)
+    {
+        ProgramConfig.DisplayProgramInfo();
+        Console.WriteLine();
+        ProgramConfig.DisplayShortInfo();
+
+        Console.WriteLine("\nПрямой доступ к константам:");
+        Console.WriteLine($"Версия: {ProgramConfig.Vers}");
+        Console.WriteLine($"Разработчик: {ProgramConfig.Razrab_name}");
+
+        Console.ReadLine();
+    }
+}
